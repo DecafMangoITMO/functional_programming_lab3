@@ -12,7 +12,7 @@ defmodule OutputPrinter do
   end
 
   defp print(method, result, step) do
-    IO.puts("Result:")
+    IO.puts("\nResult:")
 
     {start_x, _} = List.first(result)
 
@@ -20,6 +20,6 @@ defmodule OutputPrinter do
     Enum.each(result, fn {x, _} -> IO.write("#{Float.round(x, 2)}  ") end)
     IO.write("\n")
     Enum.each(result, fn {_, y} -> IO.write("#{Float.round(y, 2)}  ") end)
-    IO.write("\n")
+    IO.write("\n\n")
   end
 end
